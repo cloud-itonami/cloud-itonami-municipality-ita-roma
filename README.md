@@ -1,0 +1,49 @@
+# cloud-itonami-municipality-ita-roma
+
+Municipal-ordinance compliance catalog for **Rome** (Roma Capitale) —
+the TENTH municipality-level entry alongside
+[`cloud-itonami-municipality-jpn-tokyo`](https://github.com/cloud-itonami/cloud-itonami-municipality-jpn-tokyo),
+[`cloud-itonami-municipality-usa-washington-dc`](https://github.com/cloud-itonami/cloud-itonami-municipality-usa-washington-dc),
+[`cloud-itonami-municipality-gbr-london`](https://github.com/cloud-itonami/cloud-itonami-municipality-gbr-london),
+[`cloud-itonami-municipality-can-toronto`](https://github.com/cloud-itonami/cloud-itonami-municipality-can-toronto),
+[`cloud-itonami-municipality-deu-berlin`](https://github.com/cloud-itonami/cloud-itonami-municipality-deu-berlin),
+[`cloud-itonami-municipality-fra-paris`](https://github.com/cloud-itonami/cloud-itonami-municipality-fra-paris),
+[`cloud-itonami-municipality-nld-amsterdam`](https://github.com/cloud-itonami/cloud-itonami-municipality-nld-amsterdam),
+[`cloud-itonami-municipality-esp-madrid`](https://github.com/cloud-itonami/cloud-itonami-municipality-esp-madrid),
+and
+[`cloud-itonami-municipality-kor-seoul`](https://github.com/cloud-itonami/cloud-itonami-municipality-kor-seoul).
+Part of the [`cloud-itonami`](https://github.com/cloud-itonami)
+compliance-fact family (ADR-2607141700,
+`cloud-itonami-compliance-fact-federation`, in `com-junkawasaki/root`).
+
+## Scope
+
+A **read-only reference/archive** catalog — not an Advisor⊣Governor
+actuation actor. It proposes or executes nothing on Roma Capitale's
+behalf.
+
+Coverage is reported honestly (see `ordinance.facts/coverage`): a
+municipality not in `catalog` has **no spec-basis**, full stop — never
+fabricate one.
+
+## Data
+
+- `src/ordinance/facts.cljc` — the catalog, source of truth.
+- `schema/ordinance.edn` — DataScript schema.
+- `data/datascript-tx.edn` — derived DataScript tx-data (query this
+  alongside other `cloud-itonami`/`etzhayyim` compliance-fact sources via
+  `com-junkawasaki/root`'s `scripts/compliance-fact-query.cljs`).
+
+Both entries were verified by directly reading the source PDF text: the
+**Nuovo Regolamento per la disciplina dell'Albo Pretorio on line**
+(Deliberazione di Giunta Capitolina n. 71/2021, approved 2021-04-02)
+and the **Regolamento per l'esercizio delle attività commerciali e
+artigianali nel territorio della città storica** (Deliberazione di
+Assemblea Capitolina n. 109/2023, approved 2023-05-30).
+
+## License
+
+AGPL-3.0-or-later (matches the `cloud-itonami-iso3166-*` /
+`-municipality-*` / `-assoc-*` / `-lei-*` convention). Ordinance text
+itself remains Roma Capitale's; this repo stores only citation metadata
+(id/title/url/dates), not full text.
